@@ -14,19 +14,16 @@ def inversa_matrices(m1):
             vector.append((m1[i][j][0]*-1,m1[i][j][1]*-1))
         matriz.append(vector)
      return matriz
-def multiplicacionDeMatricesComplejas(m1,m2):
-    print()
+def multiplicacion_complejas(m1,m2):
     matriz=[]
     for i in range(len(m1)):
         vector=[]        
         for j in range(len(m2[i])):
             suma=(0,0)
-            for k in range (len(m2)):                
-                if(len(m1[i])!=len(m2)):
-                    return "mala entrada"
-                else:
-                    producto=CalculadoraBasica.producto_complejos(m1[i][k],m2[k][j])
-                    suma=CalculadoraBasica.suma_complejos(suma,producto)
+            for k in range (len(m2)):
+                print(m1[i][k],m2[k][j])
+                producto=CalculadoraBasica.producto_complejos(m1[i][k],m2[k][j])
+                suma=CalculadoraBasica.suma_complejos(suma,producto)
             vector.append(suma)
         matriz.append(vector)
 
