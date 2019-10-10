@@ -15,6 +15,7 @@ def inversa_matrices(m1):
         matriz.append(vector)
      return matriz
 def multiplicacionDeMatricesComplejas(m1,m2):
+    print()
     matriz=[]
     for i in range(len(m1)):
         vector=[]        
@@ -45,7 +46,7 @@ def transpuesta(m1):
   
 def matriz_conjugada(m1):
     for i in range(len(m1)):
-        for j in range(len(m1)):
+        for j in range(len(m1[0])):
             m1[i][j]=CalculadoraBasica.conjugado_complejos(m1[i][j])       
     return m1
 
