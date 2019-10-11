@@ -21,7 +21,6 @@ def multiplicacion_complejas(m1,m2):
         for j in range(len(m2[i])):
             suma=(0,0)
             for k in range (len(m2)):
-                print(m1[i][k],m2[k][j])
                 producto=CalculadoraBasica.producto_complejos(m1[i][k],m2[k][j])
                 suma=CalculadoraBasica.suma_complejos(suma,producto)
             vector.append(suma)
