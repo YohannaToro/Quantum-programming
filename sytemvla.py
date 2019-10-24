@@ -28,29 +28,25 @@ def variance(vector,vector1):
             a[i][j]=(matrixtmp[i][j][0]-b[i][j][0],matrixtmp[i][j][1]-b[i][j][1])
    
     tmp1=ls.multiplicacion_complejas(a,a)
-
+    print("vector",len(vector1))
     kkk = [[(0,0) for j in range(len(vector1))] for i in range(len(vector1[0]))]
 
     for i in range(0,len(vector1[0])):
         for j in range(0,len(vector1)):
             kkk[i][j]=vector1[j][i]
     print(len(kkk))
-    matriz=[]
-    for i in range(0,len(kkk)):
-        vector=[]
-        for j in range(0,len(kkk[0])):
-            vector.append((kkk[i][j][0],kkk[i][j][1]*-1))        
-        matriz.append(vector)
-     
-    tmp=ls.multiplicacion_complejas(matriz,tmp1)
-    complejo=(0,0)
-    print(matriz)
-    print(matriz)
+    for i in range(0,len(vector1[0])):
+        for j in range(0,len(vector1)):
+            kkk[i][j]=(kkk[i][j][0],(kkk[i][j][1]*-1))
 
+     
+    tmp=ls.multiplicacion_complejas(kkk,tmp1)
+    complejo=(0,0)
+    print(tmp)
     for i in range(len(tmp[0])):
         for j in range(len(tmp)):
      
-            a,b=tmp[i][j],vector1[i][j]
+            a,b=tmp[j][i],vector1[i][j]
             real=(a[0]*b[0])-(a[1]*b[1])
             ima=(a[0]*b[1])+(a[1]*b[0])
             c1=complejo;c2=(real,ima)
