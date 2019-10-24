@@ -51,8 +51,6 @@ def multipleRendijaCuantico(slits,target, prob):
             c1=resMatrix[i][j];c2=vector[j]
             x1=c1[0]*c2[0];x2=c1[1]*c2[1]
             rs.append((x1,x2))
-        
-    
     return rs
 def experimento_Canicas(matriz,estadoIni,numCambios):
     for i in range(numCambios):

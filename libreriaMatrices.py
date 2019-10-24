@@ -102,3 +102,19 @@ def transpuesta_vector(v1):
         vector=[v1[i]]
         matriz.append(vector)
     return matriz
+def adjunta_vector(m1):
+    print(m1)
+    M = [[(0,0) for j in range(len(m1))] for i in range(len(m1[0]))]
+    print(M)
+    for i in range(0,len(m1[0])):
+        for j in range(0,len(m1)):
+            print(m1[i][j])
+            M[i][j]=m1[j][i]        
+
+    matriz=[]
+    for i in range(0,len(m1)):
+        vector=[]
+        for j in range(0,len(m1[0])):
+            vector.append((M[i][j][0],M[i][j][1]*-1))        
+        matriz.append(vector)
+    return matriz 
